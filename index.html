@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div class="row">
+            <textarea class="story"></textarea>
+            <div class="col-lg-2 col-md-2 col-sm-12 mt-3">
+                <button id="set-text" type="button" class="btn  btn-primary">Colocar Contenido</button>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-12 mt-3">
+                <button id="clear-text" type="button" class="btn btn-success">Limpiar contenido</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const story = document.body.querySelector(".story");
+
+    const setText = document.body.querySelector("#set-text");
+    setText.addEventListener("click", () => {
+        story.textContent = "Era una vez una noche muy oscura y tormentosa...";
+    });
+
+    const clearText = document.body.querySelector("#clear-text");
+    clearText.addEventListener("click", () => {
+        story.textContent = "";
+    });
+</script>
+</html>
